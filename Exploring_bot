@@ -1,0 +1,15 @@
+import telebot
+
+bot = telebot.TeleBot('5662258737:AAHQO4BcGwkg8BZJ3Bx02pLFaljIlvqvWXw')
+
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.send_message(message.chat.id, 'Привет! Меня создали для того, что бы вы смогли изучить или найти тех ботов, которые вам нужны. Здесь находится информация о ботах, которые знают мои создатели. Мои создатели: @IksSonic, @ExaliSiS. Мой канал: @Exploring_bot_kanal. Бот помощник: @help_izuzhbot. Удачи в изучении телеграм ботов!')
+@bot.message_handler(commands=['iris'])
+def iris(message):
+    bot.send_message(message.chat.id, 'Бот называется ирис. Есть три вида ириса: Черный, Жёлтый, Синий, Фиолетовый. Жёлтый бот по моему мнению один из лучших. Он называется @iris_bs_bot. Он лагает меньше всех. Самый лучший бот - @iris_black_bot. Его только создали, поэтому он меньше вснх нагружен. Так же только что создали @iris_moon_bot Синий бот на третьем месте. Он называется @iris_cm_bot. Фиолетовый я советую использовать меньше всех. Он очень лагает, и называется @iris_dp_bot. У всех ботов ириса одинаковые команды. О них я расскажу в команде /iris_command')
+@bot.message_handler(commands=['iris_command'])
+def iris_command(message):
+    bot.send_message(message.chat.id, 'Команды: ')
+bot.polling(none_stop=True)
